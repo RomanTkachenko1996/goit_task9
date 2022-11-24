@@ -2,29 +2,59 @@ package task_9;
 
 import java.util.Arrays;
 
-public class MyArrayList {
-    private int [] data = new int[8];
-    int index = 0;
-    public void add(int value) {
+public class MyArrayList <T> {
+    private  T [] data;
+    private int index;
+    MyArrayList(int capacity){
+
+        data = (T[]) new Object[capacity];
+    }
+    MyArrayList(){
+       data = (T[]) new Object[8];
+        index = 0;
+    }
+
+    public void add(T value) {
         increaseSize();
         data[index] = value;
         index++;
     }
 
     private void increaseSize() {
-        if (index==data.length){
-            int [] copy = new int[data.length*2];
-            System.arraycopy(data,0,copy,0,data.length);
+        if (index == data.length) {
+            T[] copy = (T[])new Object[data.length * 2];
+            System.arraycopy(data, 0, copy, 0, data.length);
             data = copy;
         }
     }
 
-    public void remove(int index) {
+    public T remove(int indexInArray) {
+        if (indexInArray < 0 || indexInArray >= size()) {
+            throw new IndexOutOfBoundsException();
+        } else {
+            T valueToRemove = data[indexInArray];
+            T [] copy = (T[])new Object[data.length];
+            if (indexInArray == 0){
+                System.arraycopy(data,1,copy,0,data.length-1);
+                data = copy;
+            } else {
+                T [] copyLeft = Arrays.copyOfRange(data,0,indexInArray);
+                T [] copyRight = Arrays.copyOfRange(data, indexInArray+1,data.length-1);
+                System.arraycopy(copyLeft,0,copy,0,copyLeft.length);
+                System.arraycopy(copyRight,0,copy,indexInArray,copyRight.length);
+                data = copy;
+            }
+            index--;
+            return valueToRemove;
+        }
     }
-    public void clear() {
-        data = new int[8];
+
+    public boolean clear() {
+        data = (T[])new Object[8];
         index = 0;
+        return true;
     }
+
     public int size() {
         return index;
     }
@@ -35,22 +65,7 @@ public class MyArrayList {
         return (builder.append(Arrays.toString(data))).toString();
     }
 
-    public int get(int index) {
+    public T get(int index) {
         return data[index];
-    }
-
-    public static void main(String[] args) {
-        MyArrayList list = new MyArrayList();
-        for (int i = 0; i <10; i++) {
-            list.add(10);
-        }
-        System.out.println("list = " + list);
-        System.out.println("list.get(0) = " + list.get(0));
-        System.out.println("list.size() = " + list.size());
-        list.clear();
-        System.out.println("list = " + list);
-        System.out.println("list.size() = " + list.size());
-
-
     }
 }
