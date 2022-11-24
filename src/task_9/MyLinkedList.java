@@ -4,11 +4,11 @@ public class MyLinkedList {
     public void add(Object value) {
 
     }
-    public void remove(int index) {
-
+    public int remove(int index) {
+    return index;
     }
-    public void clear() {
-
+    public boolean clear() {
+        return true;
     }
     public int size() {
         return 0;
