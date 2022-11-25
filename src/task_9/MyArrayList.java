@@ -3,17 +3,16 @@ package task_9;
 import java.util.Arrays;
 
 public class MyArrayList <T> {
-    private  T [] data;
+    private  Object [] data;
     private int index;
-    MyArrayList(int capacity){
+    public MyArrayList(int capacity){
 
-        data = (T[]) new Object[capacity];
+        data = new Object[capacity];
     }
-    MyArrayList(){
-       data = (T[]) new Object[8];
+    public MyArrayList(){
+       this.data = new Object[8];
         index = 0;
     }
-
     public void add(T value) {
         increaseSize();
         data[index] = value;
@@ -22,7 +21,7 @@ public class MyArrayList <T> {
 
     private void increaseSize() {
         if (index == data.length) {
-            T[] copy = (T[])new Object[data.length * 2];
+            Object[] copy = new Object[data.length * 2];
             System.arraycopy(data, 0, copy, 0, data.length);
             data = copy;
         }
@@ -32,25 +31,25 @@ public class MyArrayList <T> {
         if (indexInArray < 0 || indexInArray >= size()) {
             throw new IndexOutOfBoundsException();
         } else {
-            T valueToRemove = data[indexInArray];
-            T [] copy = (T[])new Object[data.length];
+            Object valueToRemove = data[indexInArray];
+            Object [] copy = new Object[data.length];
             if (indexInArray == 0){
                 System.arraycopy(data,1,copy,0,data.length-1);
                 data = copy;
             } else {
-                T [] copyLeft = Arrays.copyOfRange(data,0,indexInArray);
-                T [] copyRight = Arrays.copyOfRange(data, indexInArray+1,data.length-1);
+                Object [] copyLeft = Arrays.copyOfRange(data,0,indexInArray);
+                Object [] copyRight = Arrays.copyOfRange(data, indexInArray+1,data.length-1);
                 System.arraycopy(copyLeft,0,copy,0,copyLeft.length);
                 System.arraycopy(copyRight,0,copy,indexInArray,copyRight.length);
                 data = copy;
             }
             index--;
-            return valueToRemove;
+            return (T)valueToRemove;
         }
     }
 
     public boolean clear() {
-        data = (T[])new Object[8];
+        data = new Object[8];
         index = 0;
         return true;
     }
@@ -66,6 +65,6 @@ public class MyArrayList <T> {
     }
 
     public T get(int index) {
-        return data[index];
+        return (T) data[index];
     }
 }
