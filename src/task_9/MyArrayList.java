@@ -27,7 +27,7 @@ public class MyArrayList <T> {
         }
     }
 
-    public T remove(int indexInArray) {
+    public Object remove(int indexInArray) {
         if (indexInArray < 0 || indexInArray >= size()) {
             throw new IndexOutOfBoundsException();
         } else {
@@ -35,16 +35,15 @@ public class MyArrayList <T> {
             Object [] copy = new Object[data.length];
             if (indexInArray == 0){
                 System.arraycopy(data,1,copy,0,data.length-1);
-                data = copy;
             } else {
                 Object [] copyLeft = Arrays.copyOfRange(data,0,indexInArray);
                 Object [] copyRight = Arrays.copyOfRange(data, indexInArray+1,data.length-1);
                 System.arraycopy(copyLeft,0,copy,0,copyLeft.length);
                 System.arraycopy(copyRight,0,copy,indexInArray,copyRight.length);
-                data = copy;
             }
+            data = copy;
             index--;
-            return (T)valueToRemove;
+            return valueToRemove;
         }
     }
 
@@ -64,7 +63,7 @@ public class MyArrayList <T> {
         return (builder.append(Arrays.toString(data))).toString();
     }
 
-    public T get(int index) {
-        return (T) data[index];
+    public Object get(int index) {
+        return data[index];
     }
 }
