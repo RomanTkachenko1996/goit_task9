@@ -46,8 +46,8 @@ public class MyLinkedList<T> {
      * @return removed element
      */
     public T remove (int index){
-        T elementToRemove;
         checkIfIndexAllowed(index);
+        T elementToRemove;
         if (index == 0){
             elementToRemove = first.element;
             first = first.next;
@@ -55,7 +55,7 @@ public class MyLinkedList<T> {
                 last = null;
             }
         } else{
-            Node <T> prev = getElementByIndex(index-1);
+            Node <T> prev = getNodeByIndex(index-1);
             elementToRemove = prev.next.element;
             prev.next = prev.next.next;
         }
@@ -63,7 +63,7 @@ public class MyLinkedList<T> {
         return elementToRemove;
     }
 
-    private Node <T> getElementByIndex(int index) {
+    private Node <T> getNodeByIndex(int index) {
         Node <T> current = first;
         for (int i = 0; i < index; i++) {
             current  = current.next;
@@ -100,15 +100,14 @@ public class MyLinkedList<T> {
      */
     public T get (int index){
         checkIfIndexAllowed(index);
-        return getElementByIndex(index).element;
+        return getNodeByIndex(index).element;
     }
     @Override
     public String toString() {
-        Object[] result = new Object[size];
-        int i = 0;
-        for (Node<T> x = first; x != null; x = x.next) {
-            result[i++] = x.element;
+        Object [] objects = new Object[size];
+        for (int i = 0; i < size; i++) {
+            objects[i] = getNodeByIndex(i).element;
         }
-        return Arrays.toString(result);
+        return Arrays.toString(objects);
     }
 }
