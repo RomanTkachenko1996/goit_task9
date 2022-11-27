@@ -1,48 +1,18 @@
 package task_9;
 
-import java.util.Arrays;
-import java.util.Stack;
-
 /**
  * My own implementation of Stack collection
- * - push(T value) +
- * - remove(int index) +
- * - clear() +
- * - size() +
+ * - push(T value)
+ * - remove(int index)
  * - peek()
  * - pop()
- * - toString()
+ * - clear() - in the Nodes class
+ * - size() - in the Nodes class
+ * - toString() - in the Nodes class
  *
  * @param <T> generic types of allowed elements
  */
-public class MyStack<T> {
-    Node<T> first;
-    Node<T> last;
-    private int size;
-
-    static class Node<T> {
-        T element;
-        Node<T> next;
-
-        public Node(T element) {
-            this.element = element;
-        }
-    }
-
-    private Node<T> getNodeByIndex(int index) {
-        Node<T> current = first;
-        for (int i = 0; i < index; i++) {
-            current = current.next;
-        }
-        return current;
-    }
-
-    private void checkIfIndexAllowed(int index) {
-        if (index < 0 || index > size) {
-            throw new IndexOutOfBoundsException();
-        }
-    }
-
+public class MyStack<T> extends Nodes<T> {
     /**
      * Method adds the element to the end of the stack
      *
@@ -84,22 +54,6 @@ public class MyStack<T> {
     }
 
     /**
-     * Method clears the whole stack
-     */
-    void clear() {
-       first=last=null;
-       size = 0;
-    }
-
-    /**
-     * Method returns the size of the stack
-     * @return size
-     */
-    public int size() {
-        return size;
-    }
-
-    /**
      * Method returns the first element on the stack
      * @return 1st element
      */
@@ -124,14 +78,5 @@ public class MyStack<T> {
         }
         size--;
         return elementToRemove.element;
-    }
-
-    @Override
-    public String toString() {
-        Object[] objects = new Object[size];
-        for (int i = 0; i < size; i++) {
-            objects[i] = getNodeByIndex(i).element;
-        }
-        return Arrays.toString(objects);
     }
 }

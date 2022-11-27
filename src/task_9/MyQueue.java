@@ -1,23 +1,36 @@
 package task_9;
 
-public class MyQueue {
+/**
+ * My own implementation of Queue collection
+ * - add(T element)
+ * - peek()
+ * - poll()
+ * - clear() - in the Nodes class
+ * - size() - in the Nodes class
+ * - toString() - in the Nodes class
+ *
+ * @param <T> generic types of allowed elements
+ */
+public class MyQueue <T> extends Nodes<T> {
 
-    void add(Object value) {
+    public void add(T value) {
         //додає елемент в кінець
 
     }
-    boolean clear(){
-        return true;
+    /**
+     * Method returns the size of the queue
+     * @return list size
+     */
+    public int size(){
+        return size;
     }
-    int size(){
-        return 0;
-    }
-    int peek() {
+    public T peek() {
        // повертає перший елемент з черги
-        return 0;
+        return null;
     }
-    int poll(){
-        return 0;
+    public T poll(){
+        return null;
         //повертає перший елемент з черги і видаляє його з колекції
     }
+
 }

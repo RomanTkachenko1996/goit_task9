@@ -2,8 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fd637547-ac24-45e5-96a4-e42aeb72e947" name="Changes" comment="Started writing Stack">
+      <change afterPath="$PROJECT_DIR$/src/task_9/Nodes.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/task_9/MyLinkedList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/task_9/MyLinkedList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/task_9/MyQueue.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/task_9/MyQueue.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/task_9/MyStack.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/task_9/MyStack.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -40,6 +42,11 @@
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;
   }
 }</component>
+  <component name="RecentsManager">
+    <key name="ExtractSuperBase.RECENT_KEYS">
+      <recent name="task_9" />
+    </key>
+  </component>
   <component name="RunManager" selected="Application.MyStack">
     <configuration name="MyLinkedList" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="task_9.MyLinkedList" />

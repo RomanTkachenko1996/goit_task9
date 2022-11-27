@@ -1,29 +1,29 @@
 package task_9;
 
-public class MyHashMap {
-    Object key;
-    Object value;
+/**
+ * My own implementation of LinkedList collection with methods:
+ * - add(T element)
+ * - remove(int index)
+ * - get(int index)
+ * - clear() - in the Nodes class
+ * - size() - in the Nodes class
+ * - toString() - in the Nodes class
+ * @param <K> generic types for keys
+ * @param <V> generic types for values
+ */
+public class MyHashMap<K, V>{
+    K key;
+    V value;
 
-    void put(Object key, Object value) {
+    void put(K key, V value) {
         // додає пару ключ + значення
     }
 
-    Object remove(Object key) {
+    K remove(K key) {
         //видаляє пару за ключем
         return null;
     }
-
-    boolean clear() {
-        //очищає колекцію
-        return true;
-    }
-
-    int size() {
-        return 0;
-        //повертає розмір колекції
-    }
-
-    Object get(Object key) {
+    V get(K key) {
         //повертає значення (Object value)за ключем
         return null;
     }

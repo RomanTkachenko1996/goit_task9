@@ -1,29 +1,16 @@
 package task_9;
 
-import java.util.Arrays;
-
 /**
  * My own implementation of LinkedList collection with methods:
  * - add(T element)
  * - remove(int index)
- * - clear()
  * - get(int index)
- * - size()
- * - toString()
+ * - clear() - in the Nodes class
+ * - size() - in the Nodes class
+ * - toString() - in the Nodes class
  * @param <T> generic types of allowed elements
  */
-public class MyLinkedList<T> {
-    private Node<T> first;
-    private Node<T> last;
-
-    private int size;
-    static class Node <T>{
-        T element;
-        Node <T> next;
-        public Node(T element) {
-            this.element = element;
-        }
-    }
+public class MyLinkedList<T> extends Nodes<T> {
 
     /**
      * Method adds element to the end of the list
@@ -63,27 +50,10 @@ public class MyLinkedList<T> {
         return elementToRemove;
     }
 
-    private Node <T> getNodeByIndex(int index) {
-        Node <T> current = first;
-        for (int i = 0; i < index; i++) {
-            current  = current.next;
-        }
-        return current;
-    }
-
-    private void checkIfIndexAllowed(int index) {
-        if (index < 0 || index > size){
-            throw new IndexOutOfBoundsException();
-        }
-    }
-
     /**
-     * Method clears the chain
+     * Method clears the list
      */
-    public void clear(){
-        first = last = null;
-        size = 0;
-    }
+
 
     /**
      * Method returns the size of the list
@@ -101,13 +71,5 @@ public class MyLinkedList<T> {
     public T get (int index){
         checkIfIndexAllowed(index);
         return getNodeByIndex(index).element;
-    }
-    @Override
-    public String toString() {
-        Object [] objects = new Object[size];
-        for (int i = 0; i < size; i++) {
-            objects[i] = getNodeByIndex(i).element;
-        }
-        return Arrays.toString(objects);
     }
 }
