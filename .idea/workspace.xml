@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="fd637547-ac24-45e5-96a4-e42aeb72e947" name="Changes" comment="edited MyLinkedList">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="fd637547-ac24-45e5-96a4-e42aeb72e947" name="Changes" comment="Added javadoc to methods of ArrayList and LinkedList">
       <change beforePath="$PROJECT_DIR$/src/task_9/MyArrayList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/task_9/MyArrayList.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/task_9/MyLinkedList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/task_9/MyLinkedList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/task_9/MyStack.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/task_9/MyStack.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -188,7 +188,14 @@
       <option name="project" value="LOCAL" />
       <updated>1669542699809</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Added javadoc to methods of ArrayList and LinkedList">
+      <created>1669547959244</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1669547959244</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -210,6 +217,7 @@
     <MESSAGE value="edited MyArrayList again" />
     <MESSAGE value="added MyLinkedList" />
     <MESSAGE value="edited MyLinkedList" />
-    <option name="LAST_COMMIT_MESSAGE" value="edited MyLinkedList" />
+    <MESSAGE value="Added javadoc to methods of ArrayList and LinkedList" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added javadoc to methods of ArrayList and LinkedList" />
   </component>
 </project>

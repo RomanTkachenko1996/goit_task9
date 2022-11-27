@@ -3,7 +3,7 @@ package task_9;
 import java.util.Arrays;
 
 /**
- * Implements my own ArrayList collection with methods:
+ * My own implementation of ArrayList collection with methods:
  * - add(T element)
  * - remove(int index)
  * - clear()

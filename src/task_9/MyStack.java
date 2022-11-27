@@ -1,5 +1,10 @@
 package task_9;
 
+
+/**
+ * My own implementation of Stack collection
+ *
+ */
 public class MyStack {
 
     void push(Object value) {

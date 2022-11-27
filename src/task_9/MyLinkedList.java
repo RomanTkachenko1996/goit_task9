@@ -3,7 +3,7 @@ package task_9;
 import java.util.Arrays;
 
 /**
- * Implements my own LinkedList collection with methods:
+ * My own implementation of LinkedList collection with methods:
  * - add(T element)
  * - remove(int index)
  * - clear()
