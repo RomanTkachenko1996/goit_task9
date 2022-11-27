@@ -6,9 +6,11 @@ package task_9;
  * - remove(int index)
  * - peek()
  * - pop()
- * - clear() - in the Nodes class
- * - size() - in the Nodes class
- * - toString() - in the Nodes class
+ * <p>
+ * From Nodes class:
+ * - clear()
+ * - size()
+ * - toString()
  *
  * @param <T> generic types of allowed elements
  */
@@ -54,25 +56,27 @@ public class MyStack<T> extends Nodes<T> {
     }
 
     /**
-     * Method returns the first element on the stack
-     * @return 1st element
+     * Returns the object at the top of this stack (the last item)
+     *
+     * @return 1st element of the stack
      */
     public T peek() {
         return last.element;
     }
 
     /**
-     * Method removed the first element of the stack and returns that deleted element
-     * @return 1st element, that was removed
+     * Removes the object at the top of this stack (the last item)
+     *
+     * @return 1st element of the stack
      */
     public T pop() {
         Node<T> elementToRemove;
-        if (size == 1){
+        if (size == 1) {
             elementToRemove = first;
             first = last = null;
         } else {
-            elementToRemove = getNodeByIndex(size-1);
-            Node <T> prev = getNodeByIndex(size-2);
+            elementToRemove = getNodeByIndex(size - 1);
+            Node<T> prev = getNodeByIndex(size - 2);
             prev.next = last;
             last = prev;
         }

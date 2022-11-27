@@ -5,32 +5,51 @@ package task_9;
  * - add(T element)
  * - peek()
  * - poll()
- * - clear() - in the Nodes class
- * - size() - in the Nodes class
- * - toString() - in the Nodes class
+ * <p>
+ * From Nodes class:
+ * - clear()
+ * - size()
+ * - toString()
  *
  * @param <T> generic types of allowed elements
  */
-public class MyQueue <T> extends Nodes<T> {
+public class MyQueue<T> extends Nodes<T> {
 
-    public void add(T value) {
-        //додає елемент в кінець
-
-    }
     /**
-     * Method returns the size of the queue
-     * @return list size
+     * Method adds element to the end of the list
+     *
+     * @param element new element
      */
-    public int size(){
-        return size;
-    }
-    public T peek() {
-       // повертає перший елемент з черги
-        return null;
-    }
-    public T poll(){
-        return null;
-        //повертає перший елемент з черги і видаляє його з колекції
+    public void add(T element) {
+        Node<T> newNode = new Node<>(element);
+        if (size == 0) {
+            first = last = newNode;
+        } else {
+            last.next = newNode;
+            last = newNode;
+        }
+        size++;
     }
 
+    /**
+     * Retrieves, but does not remove, the head of this queue
+     *
+     * @return head of the queue
+     */
+    public T peek() {
+        return first.element;
+    }
+
+    /**
+     * Retrieves and removes the head of this queue
+     *
+     * @return head of the queue
+     */
+    public T poll() {
+        T elementToRemove = first.element;
+        first = first.next;
+        size--;
+        return elementToRemove;
+
+    }
 }
