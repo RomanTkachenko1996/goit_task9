@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fd637547-ac24-45e5-96a4-e42aeb72e947" name="Changes" comment="edited MyLinkedList">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/task_9/MyArrayList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/task_9/MyArrayList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/task_9/MyLinkedList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/task_9/MyLinkedList.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,33 +40,7 @@
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;
   }
 }</component>
-  <component name="RunManager" selected="Application.LL">
-    <configuration name="LL" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="task_9.LL" />
-      <module name="goit_task9" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="task_9.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="MyArrayList" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="task_9.MyArrayList" />
-      <module name="goit_task9" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="task_9.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="Application.MyLinkedList1">
     <configuration name="MyLinkedList" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="task_9.MyLinkedList" />
       <module name="goit_task9" />
@@ -78,7 +54,46 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TEEEEEX" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+    <configuration name="task_9.LL" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="task_9.LL" />
+      <module name="goit_task9" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="task_9.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="task_9.MyArrayList" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="task_9.MyArrayList" />
+      <module name="goit_task9" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="task_9.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="task_9.MyLinkedList" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="task_9.MyLinkedList" />
+      <module name="goit_task9" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="task_9.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="task_9.TEEEEEX" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="task_9.TEEEEEX" />
       <module name="goit_task9" />
       <extension name="coverage">
@@ -93,10 +108,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.LL" />
-        <item itemvalue="Application.TEEEEEX" />
-        <item itemvalue="Application.MyLinkedList" />
-        <item itemvalue="Application.MyArrayList" />
+        <item itemvalue="Application.MyLinkedList1" />
+        <item itemvalue="Application.task_9.LL" />
+        <item itemvalue="Application.task_9.TEEEEEX" />
+        <item itemvalue="Application.task_9.MyLinkedList" />
+        <item itemvalue="Application.task_9.MyArrayList" />
       </list>
     </recent_temporary>
   </component>
@@ -165,7 +181,14 @@
       <option name="project" value="LOCAL" />
       <updated>1669536219470</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="edited MyLinkedList">
+      <created>1669542699809</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1669542699809</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">

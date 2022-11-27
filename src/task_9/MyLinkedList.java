@@ -2,93 +2,106 @@ package task_9;
 
 import java.util.Arrays;
 
-public class MyLinkedList<T> { private static int size = 0;
-   private Node<T> first;
+/**
+ * Implements my own LinkedList collection with methods:
+ * - add(T element)
+ * - remove(int index)
+ * - clear()
+ * - get(int index)
+ * - size()
+ * - toString()
+ * @param <T> generic types of allowed elements
+ */
+public class MyLinkedList<T> {
+    private Node<T> first;
     private Node<T> last;
 
-    private static class Node<T> {
+    private int size;
+    static class Node <T>{
         T element;
-        Node<T> next;
-        Node( T element) {
+        Node <T> next;
+        public Node(T element) {
             this.element = element;
         }
     }
 
-    public void add(T element) {
+    /**
+     * Method adds element to the end of the list
+     * @param element new element
+     */
+    public void add(T element){
         Node <T> newNode = new Node<>(element);
-        if (first == null){
+        if (size == 0){
             first = last = newNode;
-        } else {
+        }else {
             last.next = newNode;
             last = newNode;
         }
         size++;
     }
-    public void add(T element, int index) {
-        checkIndex(index);
-        Node <T> newNode = new Node<>(element);
-        if (first == null){
-            first = last = newNode;
-        } else if (index == 0) {
-            last.next = newNode;
-            last = newNode;
-        } else {
-            Node<T> current = getNodeByIndex(index-1);
-            newNode.next = current.next;
-            current.next = newNode;
-        }
-        size++;
-    }
 
-    private void checkIndex(int index) {
-        if (index < 0 || index > size){
-            throw new IndexOutOfBoundsException();
-        }
-    }
-
-    private Node<T> getNodeByIndex(int index) {
-        Node <T> current = first;
-        for (int i = 0; i < index; i++) {
-            current = current.next;
-        }
-        return current;
-    }
-
-    public T remove(int index) {
-        checkIndex(index);
+    /**
+     * Method removed element found by index in the list
+     * @param index passed index
+     * @return removed element
+     */
+    public T remove (int index){
         T elementToRemove;
+        checkIfIndexAllowed(index);
         if (index == 0){
             elementToRemove = first.element;
             first = first.next;
             if (first == null){
-               last = null;
+                last = null;
             }
         } else{
-            Node<T> prev = getNodeByIndex(index - 1);
+            Node <T> prev = getElementByIndex(index-1);
             elementToRemove = prev.next.element;
             prev.next = prev.next.next;
-            if (index == size-1){
-                last = prev;
-            }
         }
         size--;
         return elementToRemove;
     }
 
-    public void clear() {
+    private Node <T> getElementByIndex(int index) {
+        Node <T> current = first;
+        for (int i = 0; i < index; i++) {
+            current  = current.next;
+        }
+        return current;
+    }
+
+    private void checkIfIndexAllowed(int index) {
+        if (index < 0 || index > size){
+            throw new IndexOutOfBoundsException();
+        }
+    }
+
+    /**
+     * Method clears the chain
+     */
+    public void clear(){
         first = last = null;
         size = 0;
     }
 
-    public int size() {
+    /**
+     * Method returns the size of the list
+     * @return list size
+     */
+    public int size(){
         return size;
     }
 
-    public T get(int index) {
-        checkIndex(index);
-        return getNodeByIndex(index).element;
+    /**
+     * Method gets element in list by the given index
+     * @param index passed index to find needed element
+     * @return found element
+     */
+    public T get (int index){
+        checkIfIndexAllowed(index);
+        return getElementByIndex(index).element;
     }
-
     @Override
     public String toString() {
         Object[] result = new Object[size];
