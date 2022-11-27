@@ -6,8 +6,12 @@ public class MyArrayList <T> {
     private  Object [] data;
     private int index;
     public MyArrayList(int capacity){
+        if (capacity <=0){
+            throw new IllegalArgumentException();
+        } else{
+            data = new Object[capacity];
+        }
 
-        data = new Object[capacity];
     }
     public MyArrayList(){
        this.data = new Object[8];
@@ -54,7 +58,7 @@ public class MyArrayList <T> {
     }
 
     public int size() {
-        return index;
+         return index;
     }
 
     @Override
