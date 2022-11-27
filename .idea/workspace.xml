@@ -2,11 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fd637547-ac24-45e5-96a4-e42aeb72e947" name="Changes" comment="Started writing Stack">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/task_9/MyLinkedList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/task_9/MyLinkedList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/task_9/MyHashMap.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/task_9/MyHashMap.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/task_9/MyQueue.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/task_9/MyQueue.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/task_9/MyStack.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/task_9/MyStack.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/task_9/Nodes.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/task_9/Nodes.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

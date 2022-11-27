@@ -1,7 +1,7 @@
 package task_9;
 
 /**
- * My own implementation of Stack collection
+ * My own implementation of Stack collection (LIFO)
  * - push(T value)
  * - remove(int index)
  * - peek()

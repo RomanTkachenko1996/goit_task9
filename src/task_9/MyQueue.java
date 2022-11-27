@@ -41,15 +41,20 @@ public class MyQueue<T> extends Nodes<T> {
     }
 
     /**
-     * Retrieves and removes the head of this queue
+     * Retrieves and removes the head of this queue (FIFO)
      *
      * @return head of the queue
      */
     public T poll() {
-        T elementToRemove = first.element;
-        first = first.next;
+        Node<T> elementToRemove;
+        if (size == 1) {
+            elementToRemove = first;
+            first = last = null;
+        } else {
+            elementToRemove = first;
+            first = first.next;
+        }
         size--;
-        return elementToRemove;
-
+        return elementToRemove.element;
     }
 }

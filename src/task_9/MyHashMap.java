@@ -5,13 +5,16 @@ package task_9;
  * - add(T element)
  * - remove(int index)
  * - get(int index)
- * - clear() - in the Nodes class
- * - size() - in the Nodes class
- * - toString() - in the Nodes class
+ * <p>
+ * From Nodes class:
+ * - clear()
+ * - size()
+ * - toString()
+ *
  * @param <K> generic types for keys
  * @param <V> generic types for values
  */
-public class MyHashMap<K, V>{
+public class MyHashMap<K, V> {
     K key;
     V value;
 
@@ -23,6 +26,7 @@ public class MyHashMap<K, V>{
         //видаляє пару за ключем
         return null;
     }
+
     V get(K key) {
         //повертає значення (Object value)за ключем
         return null;
