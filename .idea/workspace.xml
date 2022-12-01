@@ -1,14 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="fd637547-ac24-45e5-96a4-e42aeb72e947" name="Changes" comment="Started writing Stack">
-      <change afterPath="$PROJECT_DIR$/src/task_9/MyHashMap1.java" afterDir="false" />
+    <list default="true" id="fd637547-ac24-45e5-96a4-e42aeb72e947" name="Changes" comment="edited MyHshMap">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/task_9/MyArrayList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/task_9/MyArrayList.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/task_9/MyHashMap.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/task_9/MyHashMap.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/task_9/MyLinkedList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/task_9/MyLinkedList.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/task_9/MyQueue.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/task_9/MyQueue.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/task_9/MyStack.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/task_9/MyStack.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/task_9/Nodes.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/task_9/Nodes.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -212,7 +207,14 @@
       <option name="project" value="LOCAL" />
       <updated>1669548287299</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="edited MyHshMap">
+      <created>1669906016310</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1669906016311</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -236,6 +238,7 @@
     <MESSAGE value="edited MyLinkedList" />
     <MESSAGE value="Added javadoc to methods of ArrayList and LinkedList" />
     <MESSAGE value="Started writing Stack" />
-    <option name="LAST_COMMIT_MESSAGE" value="Started writing Stack" />
+    <MESSAGE value="edited MyHshMap" />
+    <option name="LAST_COMMIT_MESSAGE" value="edited MyHshMap" />
   </component>
 </project>

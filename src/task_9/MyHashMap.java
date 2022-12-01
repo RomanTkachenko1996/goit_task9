@@ -1,18 +1,31 @@
 package task_9;
 
 import java.util.Objects;
+import java.util.StringJoiner;
 
-public class MyHashMap<K, V>{
+/**
+ * My own implementation of HashMap map with methods:
+ * - put(K key)
+ * - remove(K key)
+ * - get(K key)
+ * - clear()
+ * - size()
+ * - toString()
+ *
+ * @param <K> generic type for Key
+ * @param <V> generic type for Value
+ */
+public class MyHashMap<K, V> {
     private static final int CAPACITY = 10;
-    Node<K, V>[] buckets = (Node<K, V>[]) new Node[CAPACITY];
+    Entry<K, V>[] buckets = (Entry<K, V>[]) new Entry[CAPACITY];
     int size;
 
-    static class Node<K, V> {
-        Node<K, V> next;
+    static class Entry<K, V> {
+        Entry<K, V> next;
         K key;
         V value;
 
-        public Node(K key, V value) {
+        public Entry(K key, V value) {
             this.key = key;
             this.value = value;
         }
@@ -23,34 +36,50 @@ public class MyHashMap<K, V>{
         }
     }
 
+    /**
+     * Puts the new entry to the map
+     * 1. Finds the position in the array of buckets
+     * 2. If the bucket is empty, we put entry there
+     * 3. Else we check keys and collisions, rewrite value or put the entry to the end of the LinkedList within a bucket
+     *
+     * @param key
+     * @param value
+     */
     public void put(K key, V value) {
-        Node<K, V> newNode = new Node<>(key, value);
+        Entry<K, V> newEntry = new Entry<>(key, value);
         int bucket = Math.abs(Objects.hashCode(key)) % 10;
         if (buckets[bucket] == null) {
-            buckets[bucket] = newNode;
+            buckets[bucket] = newEntry;
             size++;
         } else {
-            if (newNode.key.equals(buckets[bucket].key)) {
-                buckets[bucket].value = newNode.value;
+            if (newEntry.key.equals(buckets[bucket].key)) {
+                buckets[bucket].value = newEntry.value;
             } else {
-                Node<K, V> current = buckets[bucket];
+                Entry<K, V> current = buckets[bucket];
                 while (current.next != null) {
                     current = current.next;
                 }
-                Node<K, V> lastNode = current;
-                lastNode.next = newNode;
+                Entry<K, V> lastEntry = current;
+                lastEntry.next = newEntry;
                 size++;
             }
         }
     }
 
+    /**
+     * Gets the entry: checks each entry and compares it with the key. If key found, returns the value of the entry.
+     * Otherwise, returns Null.
+     *
+     * @param key
+     * @return value found
+     */
     public V get(K key) {
         int bucket = Math.abs(Objects.hashCode(key)) % 10;
         V value = null;
         if (buckets[bucket] == null) {
             throw new IllegalArgumentException();
         } else {
-            Node<K, V> current = buckets[bucket];
+            Entry<K, V> current = buckets[bucket];
             do {
                 if (current.key.equals(key)) {
                     value = current.value;
@@ -61,30 +90,64 @@ public class MyHashMap<K, V>{
         return value;
     }
 
-    V remove(K key) {
-       return null;
+    /**
+     * Removes the entry: checks each entry and compares it with the key. If key found, returns the value of the entry.
+     * Otherwise, returns Null.
+     * Removes the found entry via rewriting the links.
+     *
+     * @param key
+     * @return value removed
+     */
+    public V remove(K key) {
+        V value = null;
+        int bucket = Math.abs(Objects.hashCode(key)) % 10;
+        Entry<K, V> current = buckets[bucket];
+        if (current.key.equals(key)) {
+            value = current.value;
+            current = current.next;
+            buckets[bucket] = current;
+            size--;
+        } else {
+            while (current.next != null) {
+                if (current.next.key.equals(key)) {
+                    value = current.next.value;
+                    current.next = current.next.next;
+                    size--;
+                }
+                current = current.next;
+            }
+        }
+        return value;
     }
 
     @Override
     public String toString() {
-        return super.toString();
+        StringJoiner sj = new StringJoiner(",");
+        for (Entry<K, V> bucket : buckets) {
+            if (bucket != null) {
+                Entry<K, V> current = bucket;
+                sj.add(current.toString());
+                while (current.next != null) {
+                    sj.add(current.next.toString());
+                    current = current.next;
+                }
+            }
+        }
+        return "{" + sj + "}";
     }
 
-    public static void main(String[] args) {
-        MyHashMap<String, String> map = new MyHashMap<>();
-        map.put("qewrqwerqwrqwer", "1");
-        map.put("qwerqwrq", "2");
-        map.put("qwerwqwrq", "3");
-        map.put("werwer", "4");
-        map.put("wer", "5");
-        map.put("2t4", "6");
-        map.put("ert", "7");
-        map.put("er", "8");
-        map.put("3453dsf", "9");
-        map.put("aerqwer", "10");
-        map.put("43", "11");
-        System.out.println("map.get(\"email1\") = " + map.get("aerqwer"));
-        System.out.println("map.get(\"email2\") = " + map.get("43"));
-        System.out.println("map.get(\"email3\") = " + map.get("11"));
+    /**
+     * @return the size of the map
+     */
+    public int size() {
+        return size;
+    }
+
+    /**
+     * Method clears the map
+     */
+    public void clear() {
+        size = 0;
+        buckets = (Entry<K, V>[]) new Entry[CAPACITY];
     }
 }

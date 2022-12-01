@@ -3,7 +3,7 @@ package task_9;
 import java.util.Arrays;
 
 /**
- * Parent class the introduces each particular Node as separate new object
+ * Parent class the introduces each particular Entry as separate new object
  * in the chain for MyLinkedList/MyQueue/MyStack.
  * It has common fields and methods for all the child classes.
  *
