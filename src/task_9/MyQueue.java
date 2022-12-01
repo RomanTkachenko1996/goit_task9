@@ -2,7 +2,7 @@ package task_9;
 
 /**
  * My own implementation of Queue collection
- * - add(T element)
+ * - add(E element)
  * - peek()
  * - poll()
  * <p>
@@ -11,17 +11,17 @@ package task_9;
  * - size()
  * - toString()
  *
- * @param <T> generic types of allowed elements
+ * @param <E> generic types of allowed elements
  */
-public class MyQueue<T> extends Nodes<T> {
+public class MyQueue<E> extends Nodes<E> {
 
     /**
      * Method adds element to the end of the list
      *
      * @param element new element
      */
-    public void add(T element) {
-        Node<T> newNode = new Node<>(element);
+    public void add(E element) {
+        Node<E> newNode = new Node<>(element);
         if (size == 0) {
             first = last = newNode;
         } else {
@@ -36,7 +36,7 @@ public class MyQueue<T> extends Nodes<T> {
      *
      * @return head of the queue
      */
-    public T peek() {
+    public E peek() {
         return first.element;
     }
 
@@ -45,8 +45,8 @@ public class MyQueue<T> extends Nodes<T> {
      *
      * @return head of the queue
      */
-    public T poll() {
-        Node<T> elementToRemove;
+    public E poll() {
+        Node<E> elementToRemove;
         if (size == 1) {
             elementToRemove = first;
             first = last = null;

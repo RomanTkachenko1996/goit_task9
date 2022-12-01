@@ -7,18 +7,17 @@ import java.util.Arrays;
  * in the chain for MyLinkedList/MyQueue/MyStack.
  * It has common fields and methods for all the child classes.
  *
- * @param <T> generic type of element
+ * @param <E> generic type of element
  */
-class Nodes<T> {
+class Nodes<E> {
     protected int size;
-    Node<T> first;
-    Node<T> last;
+    Node<E> first;
+    Node<E> last;
 
-    static class Node<T> {
-        T element;
-        Node<T> next;
-
-        public Node(T element) {
+    static class Node<E> {
+        E element;
+        Node<E> next;
+        public Node(E element) {
             this.element = element;
         }
     }
@@ -29,8 +28,8 @@ class Nodes<T> {
      * @param index passed index
      * @return found node by the given index
      */
-     Node<T> getNodeByIndex(int index) {
-        Node<T> current = first;
+     Node<E> getNodeByIndex(int index) {
+        Node<E> current = first;
         for (int i = 0; i < index; i++) {
             current = current.next;
         }

@@ -2,8 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fd637547-ac24-45e5-96a4-e42aeb72e947" name="Changes" comment="Started writing Stack">
+      <change afterPath="$PROJECT_DIR$/src/task_9/MyHashMap1.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/task_9/MyArrayList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/task_9/MyArrayList.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/task_9/MyHashMap.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/task_9/MyHashMap.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/task_9/MyLinkedList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/task_9/MyLinkedList.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/task_9/MyQueue.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/task_9/MyQueue.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/task_9/MyStack.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/task_9/MyStack.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/task_9/Nodes.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/task_9/Nodes.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,47 +50,8 @@
       <recent name="task_9" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.MyQueue">
-    <configuration name="MyLinkedList" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="task_9.MyLinkedList" />
-      <module name="goit_task9" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="task_9.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="MyQueue" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="task_9.MyQueue" />
-      <module name="goit_task9" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="task_9.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="MyStack" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="task_9.MyStack" />
-      <module name="goit_task9" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="task_9.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="task_9.LL" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Application.MyHashMap1">
+    <configuration name="LL" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="task_9.LL" />
       <module name="goit_task9" />
       <extension name="coverage">
@@ -97,8 +64,47 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="task_9.TEEEEEX" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="task_9.TEEEEEX" />
+    <configuration name="MyHashMap" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="task_9.MyHashMap" />
+      <module name="goit_task9" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="task_9.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="task_9.MyHashMap" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="task_9.MyHashMap" />
+      <module name="goit_task9" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="task_9.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="task_9.MyQueue" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="task_9.MyQueue" />
+      <module name="goit_task9" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="task_9.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="task_9.MyStack" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="task_9.MyStack" />
       <module name="goit_task9" />
       <extension name="coverage">
         <pattern>
@@ -112,11 +118,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.MyQueue" />
-        <item itemvalue="Application.MyStack" />
-        <item itemvalue="Application.MyLinkedList1" />
+        <item itemvalue="Application.MyHashMap1" />
+        <item itemvalue="Application.task_9.MyHashMap" />
+        <item itemvalue="Application.task_9.MyQueue" />
+        <item itemvalue="Application.task_9.MyStack" />
         <item itemvalue="Application.task_9.LL" />
-        <item itemvalue="Application.task_9.TEEEEEX" />
       </list>
     </recent_temporary>
   </component>

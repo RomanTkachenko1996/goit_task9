@@ -4,16 +4,16 @@ import java.util.Arrays;
 
 /**
  * My own implementation of ArrayList collection with methods:
- * - add(T element)
+ * - add(E element)
  * - remove(int index)
  * - clear()
  * - get(int index)
  * - size()
  * - toString()
  *
- * @param <T> generic types of allowed elements
+ * @param <E> generic types of allowed elements
  */
-public class MyArrayList<T> {
+public class MyArrayList<E> {
     private Object[] data;
     private int index;
 
@@ -35,7 +35,7 @@ public class MyArrayList<T> {
      * Method adds element to the end of the list
      * @param value value to add
      */
-    public void add(T value) {
+    public void add(E value) {
         increaseSize();
         data[index] = value;
         index++;

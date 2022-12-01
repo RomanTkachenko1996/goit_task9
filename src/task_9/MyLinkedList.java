@@ -2,7 +2,7 @@ package task_9;
 
 /**
  * My own implementation of LinkedList collection with methods:
- * - add(T element)
+ * - add(E element)
  * - remove(int index)
  * - get(int index)
  * <p>
@@ -11,17 +11,17 @@ package task_9;
  * - size()
  * - toString()
  *
- * @param <T> generic types of allowed elements
+ * @param <E> generic types of allowed elements
  */
-public class MyLinkedList<T> extends Nodes<T> {
+public class MyLinkedList<E> extends Nodes<E> {
 
     /**
      * Method adds element to the end of the list
      *
      * @param element new element
      */
-    public void add(T element) {
-        Node<T> newNode = new Node<>(element);
+    public void add(E element) {
+        Node<E> newNode = new Node<>(element);
         if (size == 0) {
             first = last = newNode;
         } else {
@@ -37,9 +37,9 @@ public class MyLinkedList<T> extends Nodes<T> {
      * @param index passed index
      * @return removed element
      */
-    public T remove(int index) {
+    public E remove(int index) {
         checkIfIndexAllowed(index);
-        T elementToRemove;
+        E elementToRemove;
         if (index == 0) {
             elementToRemove = first.element;
             first = first.next;
@@ -47,7 +47,7 @@ public class MyLinkedList<T> extends Nodes<T> {
                 last = null;
             }
         } else {
-            Node<T> prev = getNodeByIndex(index - 1);
+            Node<E> prev = getNodeByIndex(index - 1);
             elementToRemove = prev.next.element;
             prev.next = prev.next.next;
         }
@@ -70,7 +70,7 @@ public class MyLinkedList<T> extends Nodes<T> {
      * @param index passed index to find needed element
      * @return found element
      */
-    public T get(int index) {
+    public E get(int index) {
         checkIfIndexAllowed(index);
         return getNodeByIndex(index).element;
     }
